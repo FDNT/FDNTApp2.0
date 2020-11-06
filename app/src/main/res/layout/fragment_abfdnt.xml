@@ -20,12 +20,13 @@
             android:background="@color/white">
             <com.google.android.material.appbar.MaterialToolbar
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="40dp"
+                app:navigationIcon="@drawable/ic_hamburger_menu_24dp">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="@dimen/topbar_font_size"
-                    android:gravity="center"
+                    android:gravity="left|center"
                     android:text="@string/title_abfdnt"/>
             </com.google.android.material.appbar.MaterialToolbar>
         </com.google.android.material.appbar.AppBarLayout>
