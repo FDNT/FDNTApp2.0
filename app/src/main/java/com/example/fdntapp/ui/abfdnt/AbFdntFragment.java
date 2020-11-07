@@ -11,25 +11,31 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.fdntapp.R;
+import com.example.fdntapp.databinding.FragmentAbfdntBinding;
 
 public class AbFdntFragment extends Fragment {
 
-    private AbFdntViewModel notificationsViewModel;
-
+    private FragmentAbfdntBinding binding;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                new ViewModelProvider(this).get(AbFdntViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_abfdnt, container, false);
-        final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        AbFdntViewModel notificationsViewModel = new ViewModelProvider(this).get(AbFdntViewModel.class);
+
+        binding = FragmentAbfdntBinding.inflate(getLayoutInflater());
+
+        /*View root = inflater.inflate(R.layout.fragment_abfdnt, container, false);
+        final TextView textView = root.findViewById(R.id.text_notifications);*/
+
+       /* notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText(s);
+                binding.textNotifications.setText(s);
             }
-        });
-        return root;
+        });*/
+
+
+        return binding.getRoot();
     }
 }

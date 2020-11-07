@@ -3,4 +3,5 @@
     <string name="title_home">Szukaj w aktualnościach</string>
     <string name="title_login">Logowanie</string>
     <string name="title_abfdnt">O Fundacji</string>
+    <string name="bottom_bar_home_title">Główna</string>
 </resources>
