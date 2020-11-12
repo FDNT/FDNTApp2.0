@@ -5,34 +5,4 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     tools:context=".ui.abfdnt.AbFdntFragment">
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
-            android:layout_gravity="top|center"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_horizontal_margin">
-            <com.google.android.material.appbar.AppBarLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white">
-                <com.google.android.material.appbar.MaterialToolbar
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    app:navigationIcon="@drawable/ic_hamburger_menu_24dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textSize="@dimen/topbar_font_size"
-                        android:gravity="start|center"
-                        android:text="@string/title_abfdnt"/>
-                </com.google.android.material.appbar.MaterialToolbar>
-            </com.google.android.material.appbar.AppBarLayout>
-        </androidx.cardview.widget.CardView>
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
