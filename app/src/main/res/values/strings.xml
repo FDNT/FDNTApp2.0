@@ -4,4 +4,6 @@
     <string name="title_login">Logowanie</string>
     <string name="title_abfdnt">O Fundacji</string>
     <string name="bottom_bar_home_title">Główna</string>
+    <string name="open_string">Open</string>
+    <string name="close_string">Close</string>
 </resources>
