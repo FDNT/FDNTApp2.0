@@ -21,20 +21,8 @@ public class AbFdntFragment extends Fragment {
     private FragmentAbfdntBinding binding;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        AbFdntViewModel notificationsViewModel = new ViewModelProvider(this).get(AbFdntViewModel.class);
-
         binding = FragmentAbfdntBinding.inflate(getLayoutInflater());
-
-        /*View root = inflater.inflate(R.layout.fragment_abfdnt, container, false);
-        final TextView textView = root.findViewById(R.id.text_notifications);*/
-
-       /* notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                binding.textNotifications.setText(s);
-            }
-        });*/
-
+        AbFdntViewModel abFdntViewModel = new ViewModelProvider(this).get(AbFdntViewModel.class);
 
         return binding.getRoot();
     }
