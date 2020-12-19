@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FDNTApp">
+        <activity android:name=".ui.abfdnt.AbfdntActivity"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.FDNTApp.NoActionBar" />
+        <activity
+            android:name=".ui.home.HomeActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

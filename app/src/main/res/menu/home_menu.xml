@@ -3,17 +3,24 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/news"
         android:title="Aktualności" />
     <item
+        android:id="@+id/formation"
         android:title="Formacja" />
     <item
+        android:id="@+id/office"
         android:title="Biuro" />
     <item
+        android:id="@+id/announcements"
         android:title="Ogłoszenia wspólnoty" />
     <item
+        android:id="@+id/Cracow"
         android:title="Diecezja Krakowska" />
     <item
+        android:id="@+id/student_camp"
         android:title="Obóz studentów" />
     <item
+        android:id="@+id/dev"
         android:title="Dev" />
 </menu>
