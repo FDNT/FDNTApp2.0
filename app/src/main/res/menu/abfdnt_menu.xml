@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/ab_fdnt"
+        android:id="@+id/about"
         android:title="O Fundacji" />
 
     <item
         android:id="@+id/our_patron"
         android:title="Nasz Patron" />
 
-    <item
-        android:id="@+id/for_helper"
-        android:title="Dla Darczyńcy" />
-
-    <item
-        android:id="@+id/channel"
-        android:title="Dzieło TV" />
-
-    <item
-        android:id="@+id/contact"
-        android:title="Kontakt" />
 </menu>

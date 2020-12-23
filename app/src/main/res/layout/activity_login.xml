@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="0dp">
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <androidx.cardview.widget.CardView
@@ -25,23 +25,23 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white">
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:layout_width="match_parent"
-                android:id="@+id/abfdnt_toolbar"
-                android:layout_height="40dp"
-                app:navigationIcon="@drawable/ic_hamburger_menu_24dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="start|center"
-                android:text="@string/abfdnt_topbar_text"
-                android:textSize="@dimen/topbar_font_size"/>
-            </com.google.android.material.appbar.MaterialToolbar>
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:layout_width="match_parent"
+                    android:id="@+id/toolbar"
+                    app:contentInsetStart="0dp"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/login_topbar_text"
+                        android:textSize="@dimen/topbar_font_size"/>
+                </com.google.android.material.appbar.MaterialToolbar>
             </com.google.android.material.appbar.AppBarLayout>
         </androidx.cardview.widget.CardView>
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_nav_view"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_gravity="bottom"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
@@ -50,28 +50,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
+            app:navGraph="@navigation/main_navigation"
             app:menu="@menu/main_menu" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-        <fragment
-            android:id="@+id/nav_host_fragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="?attr/actionBarSize"
-            app:defaultNavHost="true"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:navGraph="@navigation/abfdnt_navigation"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/ab_fdnt_drawer"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:menu="@menu/abfdnt_menu"
-        app:headerLayout="@layout/drawer_header"
-        android:fitsSystemWindows="true" />
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.fdntapp.ui.home.HomeActivity"
+        android:name="com.example.fdntapp.ui.HomeActivity"
         android:label="@string/bottom_bar_home_title"
         tools:layout="@layout/activity_home" />
 
