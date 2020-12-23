@@ -17,4 +17,7 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="home_topbar_text">Szukaj w aktualnościach</string>
+    <string name="login_topbar_text">Logowanie</string>
+    <string name="abfdnt_topbar_text">O Fundacji</string>
 </resources>
