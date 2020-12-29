@@ -38,9 +38,11 @@ public class AbfdntActivity extends AppCompatActivity implements NavigationView.
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                    finish();
                     break;
                 case R.id.navigation_login:
                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                    finish();
                     break;
                 default:
                     return false;

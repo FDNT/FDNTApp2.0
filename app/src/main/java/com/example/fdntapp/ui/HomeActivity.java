@@ -24,9 +24,11 @@ public class HomeActivity extends AppCompatActivity {
             switch(item.getItemId()) {
                 case R.id.navigation_abfdnt:
                     startActivity(new Intent(getApplicationContext(), AbfdntActivity.class));
+                    finish();
                     break;
                 case R.id.navigation_login:
                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                    finish();
                     break;
                 default:
                     return false;

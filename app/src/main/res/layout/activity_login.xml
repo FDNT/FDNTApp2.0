@@ -65,7 +65,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:boxStrokeWidthFocused="1dp">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/text_input_edit_text_email"
+                android:id="@+id/log_in_name"
                 android:layout_width="match_parent"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/black"
@@ -85,7 +85,7 @@
         app:boxStrokeWidthFocused="1dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/text_input_password"
+            android:id="@+id/log_in_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/passwd"
@@ -99,14 +99,14 @@
         android:layout_marginTop="15dp"
         android:text="Nie wiesz jakie jest twoje hasło?"
         android:gravity="left"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/log_in_button"
         app:layout_constraintEnd_toEndOf="@+id/text_input_layout_password"
         app:layout_constraintStart_toStartOf="@+id/text_input_layout_password"
         app:layout_constraintTop_toBottomOf="@+id/text_input_layout_password"
         android:textColor="@color/yellow_main"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/log_in_button"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginTop="40dp"

@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "255658901145",
+    "firebase_url": "https://fdntapp-1564519012772.firebaseio.com",
+    "project_id": "fdntapp-1564519012772",
+    "storage_bucket": "fdntapp-1564519012772.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255658901145:android:f5d758a27e9d0fd5d2c208",
+        "android_client_info": {
+          "package_name": "com.example.fdntapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "255658901145-q1pert410medamrg6sc9f0284jair69s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fdntapp",
+            "certificate_hash": "25b1bf82797cd6b52c0c7cf108010148fc625581"
+          }
+        },
+        {
+          "client_id": "255658901145-3odohtgp13ib0843lgmsvg1lkna6kr13.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbAUi9AyeDls5Kky1DDvPHGEuuUpJMTxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "255658901145-3odohtgp13ib0843lgmsvg1lkna6kr13.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "255658901145-5r0qeiunibapeo3g32v6h397nfarhki7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fdnt.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255658901145:android:ff0b62cc8f82b6eed2c208",
+        "android_client_info": {
+          "package_name": "fdnt.app.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "255658901145-kg0ccacvtacc3nkiipj3hh3p58mu4eo9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fdnt.app.android",
+            "certificate_hash": "e0aab31caa931c752dc4add73bf908d452ac730b"
+          }
+        },
+        {
+          "client_id": "255658901145-3odohtgp13ib0843lgmsvg1lkna6kr13.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbAUi9AyeDls5Kky1DDvPHGEuuUpJMTxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "255658901145-3odohtgp13ib0843lgmsvg1lkna6kr13.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "255658901145-5r0qeiunibapeo3g32v6h397nfarhki7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fdnt.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
