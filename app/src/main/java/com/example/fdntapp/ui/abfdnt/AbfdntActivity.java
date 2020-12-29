@@ -1,6 +1,7 @@
 package com.example.fdntapp.ui.abfdnt;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -23,6 +24,7 @@ import com.google.android.material.navigation.NavigationView;
 public class AbfdntActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     ActivityAbfdntBinding binding;
     NavController navController;
+    ActionBarDrawerToggle actionBarDrawerToggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,14 +52,19 @@ public class AbfdntActivity extends AppCompatActivity implements NavigationView.
 
         //drawer navigation
         setSupportActionBar(binding.abfdntToolbar);
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, binding.drawerLayout, binding.abfdntToolbar,
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, binding.drawerLayout, binding.abfdntToolbar,
                 R.string.open_string, R.string.close_string);
         binding.drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // on click item of navigation drawer
         binding.abFdntDrawer.setNavigationItemSelectedListener(this);
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        actionBarDrawerToggle.syncState();
     }
 
     @Override

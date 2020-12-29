@@ -20,4 +20,6 @@
     <string name="home_topbar_text">Szukaj w aktualnościach</string>
     <string name="login_topbar_text">Logowanie</string>
     <string name="abfdnt_topbar_text">O Fundacji</string>
+    <string name="e_mail">E-mail</string>
+    <string name="passwd">Hasło</string>
 </resources>
