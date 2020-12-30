@@ -12,6 +12,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -23,8 +24,8 @@ import com.google.android.material.navigation.NavigationView;
 
 public class AbfdntActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     ActivityAbfdntBinding binding;
-    NavController navController;
     ActionBarDrawerToggle actionBarDrawerToggle;
+    NavController navController;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,11 +38,11 @@ public class AbfdntActivity extends AppCompatActivity implements NavigationView.
         binding.bottomNavView.setOnNavigationItemSelectedListener(item-> {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                    startActivity(new Intent(this, HomeActivity.class));
                     finish();
                     break;
                 case R.id.navigation_login:
-                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                    startActivity(new Intent(this, LoginActivity.class));
                     finish();
                     break;
                 default:
@@ -82,4 +83,5 @@ public class AbfdntActivity extends AppCompatActivity implements NavigationView.
         }
         return false;
     }
+
 }

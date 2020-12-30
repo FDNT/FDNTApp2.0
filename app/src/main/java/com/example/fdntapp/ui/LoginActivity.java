@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.fdntapp.R;
@@ -37,11 +35,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         binding.bottomNavView.setOnNavigationItemSelectedListener(item-> {
             switch(item.getItemId()) {
                 case R.id.navigation_abfdnt:
-                    startActivity(new Intent(getApplicationContext(), AbfdntActivity.class));
+                    startActivity(new Intent(this, AbfdntActivity.class));
                     finish();
                     break;
                 case R.id.navigation_home:
-                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                    startActivity(new Intent(this, HomeActivity.class));
                     finish();
                     break;
                 default:

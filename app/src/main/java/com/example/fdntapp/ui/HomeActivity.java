@@ -23,11 +23,11 @@ public class HomeActivity extends AppCompatActivity {
         binding.bottomNavView.setOnNavigationItemSelectedListener(item-> {
             switch(item.getItemId()) {
                 case R.id.navigation_abfdnt:
-                    startActivity(new Intent(getApplicationContext(), AbfdntActivity.class));
+                    startActivity(new Intent(this, AbfdntActivity.class));
                     finish();
                     break;
                 case R.id.navigation_login:
-                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                    startActivity(new Intent(this, LoginActivity.class));
                     finish();
                     break;
                 default:
