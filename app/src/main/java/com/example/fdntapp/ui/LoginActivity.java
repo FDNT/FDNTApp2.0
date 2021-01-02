@@ -36,11 +36,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             switch(item.getItemId()) {
                 case R.id.navigation_abfdnt:
                     startActivity(new Intent(this, AbfdntActivity.class));
-                    finish();
                     break;
                 case R.id.navigation_home:
                     startActivity(new Intent(this, HomeActivity.class));
-                    finish();
                     break;
                 default:
                     return false;

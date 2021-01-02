@@ -11,14 +11,17 @@
         android:theme="@style/Theme.FDNTApp">
         <activity
             android:name=".ui.LoginActivity"
+            android:noHistory="true"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.FDNTApp.NoActionBar"/>
         <activity
             android:name=".ui.abfdnt.AbfdntActivity"
+            android:noHistory="true"
             android:label="@string/title_abfdnt"
             android:theme="@style/Theme.FDNTApp.NoActionBar"/>
         <activity
             android:name=".ui.HomeActivity"
+            android:noHistory="true"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
