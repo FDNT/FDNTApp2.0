@@ -52,18 +52,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String email = binding.logInName.getText().toString();
         String password = binding.logInName.getText().toString();
         mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            FirebaseUser user = mAuth.getCurrentUser();
-                           // updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Toast.makeText(LoginActivity.this, "Logowanie nie udało się",
-                                    Toast.LENGTH_SHORT).show();
-                        }
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        // Sign in success, update UI with the signed-in user's information
+                        FirebaseUser user = mAuth.getCurrentUser();
+                       // updateUI(user);
+                    } else {
+                        // If sign in fails, display a message to the user.
+                        Toast.makeText(LoginActivity.this, "Logowanie nie udało się",
+                                Toast.LENGTH_SHORT).show();
                     }
                 });
     }
@@ -78,11 +75,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.log_in_button:
-                startLogging();
-                System.out.println("XD");
-                break;
+        if (v.getId() == R.id.log_in_button) {
+            startLogging();
+            System.out.println("XD");
         }
     }
 }

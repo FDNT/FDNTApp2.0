@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/about"
+        android:id="@+id/about_fragment"
+        android:onClick=""
         android:title="O Fundacji" />
 
     <item
-        android:id="@+id/our_patron"
+        android:id="@+id/patron_fragment"
         android:title="Nasz Patron" />
 
 </menu>

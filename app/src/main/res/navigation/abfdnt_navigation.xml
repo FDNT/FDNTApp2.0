@@ -3,19 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/abfdnt_navigation"
-    app:startDestination="@id/aboutFragment">
+    app:startDestination="@id/about_fragment">
 
     <fragment
-        android:id="@+id/aboutFragment"
+        android:id="@+id/about_fragment"
         android:name="com.example.fdntapp.ui.abfdnt.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" >
-        <action
-            android:id="@+id/action_aboutFragment_to_patronFragment"
-            app:destination="@id/patronFragment" />
     </fragment>
     <fragment
-        android:id="@+id/patronFragment"
+        android:id="@+id/patron_fragment"
         android:name="com.example.fdntapp.ui.abfdnt.PatronFragment"
         android:label="fragment_patron"
         tools:layout="@layout/fragment_patron" />

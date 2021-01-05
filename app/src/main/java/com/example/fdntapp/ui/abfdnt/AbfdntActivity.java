@@ -2,6 +2,7 @@ package com.example.fdntapp.ui.abfdnt;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -15,6 +16,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.fdntapp.R;
 import com.example.fdntapp.databinding.ActivityAbfdntBinding;
@@ -24,7 +26,6 @@ import com.google.android.material.navigation.NavigationView;
 
 public class AbfdntActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     ActivityAbfdntBinding binding;
-    ActionBarDrawerToggle actionBarDrawerToggle;
     NavController navController;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,33 +54,26 @@ public class AbfdntActivity extends AppCompatActivity implements NavigationView.
 
         //drawer navigation
         setSupportActionBar(binding.abfdntToolbar);
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this, binding.drawerLayout, binding.abfdntToolbar,
-                R.string.open_string, R.string.close_string);
-        binding.drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.about_fragment, R.id.patron_fragment)
+                .setOpenableLayout(binding.drawerLayout)
+                .build();
+        NavigationUI.setupWithNavController(binding.abfdntToolbar, navController, appBarConfiguration);
 
         // on click item of navigation drawer
-        binding.abFdntDrawer.setNavigationItemSelectedListener(this);
-    }
-
-    @Override
-    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        actionBarDrawerToggle.syncState();
+        binding.drawerNavView.setNavigationItemSelectedListener(this);
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         binding.drawerLayout.closeDrawer(GravityCompat.START);
         switch (item.getItemId()) {
-            case R.id.about:
-                navController.navigate(R.id.aboutFragment);
+            case R.id.about_fragment:
+                navController.navigate(R.id.about_fragment);
                 break;
-            case R.id.our_patron:
-                navController.navigate(R.id.patronFragment);
+            case R.id.patron_fragment:
+                navController.navigate(R.id.patron_fragment);
                 break;
         }
         return false;
     }
-
 }
