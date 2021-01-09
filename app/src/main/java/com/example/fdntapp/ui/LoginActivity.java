@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.fdntapp.R;
+import com.example.fdntapp.abstractions.BaseActivity;
 import com.example.fdntapp.databinding.ActivityLoginBinding;
 import com.example.fdntapp.ui.abfdnt.AbfdntActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -17,35 +18,20 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
-
+public class LoginActivity extends BaseActivity {
+    private ActivityLoginBinding binding;
     private FirebaseAuth mAuth;
-    ActivityLoginBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityLoginBinding.inflate(getLayoutInflater());
-        View view = binding.getRoot();
         mAuth = FirebaseAuth.getInstance();
-
-        setContentView(view);
-
-        binding.bottomNavView.setSelectedItemId(R.id.navigation_login);
-        binding.bottomNavView.setOnNavigationItemSelectedListener(item-> {
-            switch(item.getItemId()) {
-                case R.id.navigation_abfdnt:
-                    startActivity(new Intent(this, AbfdntActivity.class));
-                    break;
-                case R.id.navigation_home:
-                    startActivity(new Intent(this, HomeActivity.class));
-                    break;
-                default:
-                    return false;
+        binding.logInButton.setOnClickListener(v -> {
+            if (v.getId() == R.id.log_in_button) {
+                startLogging();
+                System.out.println("XD");
             }
-            return false;
         });
-        binding.logInButton.setOnClickListener(this);
     }
 
     private void startLogging() {
@@ -74,10 +60,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.log_in_button) {
-            startLogging();
-            System.out.println("XD");
-        }
+    protected int getBottomNavigationMenuItemId() {
+        return R.id.action_login;
     }
+
+    @Override
+    protected View getRootView() {
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        return binding.getRoot();
+    }
+
 }
