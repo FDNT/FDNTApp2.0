@@ -54,14 +54,14 @@
             app:layout_constraintStart_toStartOf="@+id/card_view"
             app:layout_constraintTop_toBottomOf="@+id/card_view"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxStrokeWidthFocused="1dp">
+            app:boxStrokeWidthFocused="1dp"
+            android:hint="@string/e_mail" >
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/log_in_name"
                 android:layout_width="match_parent"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/black"
-                android:layout_height="wrap_content"
-                android:hint="@string/e_mail" />
+                android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -73,13 +73,14 @@
         app:layout_constraintEnd_toEndOf="@+id/card_view"
         app:layout_constraintStart_toStartOf="@+id/card_view"
         app:layout_constraintTop_toBottomOf="@+id/text_input_layout_email"
-        app:boxStrokeWidthFocused="1dp">
+        app:boxStrokeWidthFocused="1dp"
+        android:hint="@string/passwd"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/log_in_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/passwd"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 

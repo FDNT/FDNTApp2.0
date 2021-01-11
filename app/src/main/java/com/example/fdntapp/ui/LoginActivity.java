@@ -26,6 +26,7 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAuth = FirebaseAuth.getInstance();
+
         binding.logInButton.setOnClickListener(v -> {
             if (v.getId() == R.id.log_in_button) {
                 startLogging();
@@ -37,7 +38,10 @@ public class LoginActivity extends BaseActivity {
     private void startLogging() {
         String email = binding.logInName.getText().toString();
         String password = binding.logInName.getText().toString();
-        mAuth.signInWithEmailAndPassword(email, password)
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Podaj dane", Toast.LENGTH_SHORT).show();
+        }
+        else mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         // Sign in success, update UI with the signed-in user's information
