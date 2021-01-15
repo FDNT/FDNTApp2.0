@@ -26,27 +26,25 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAuth = FirebaseAuth.getInstance();
-
-        binding.logInButton.setOnClickListener(v -> {
-            if (v.getId() == R.id.log_in_button) {
-                startLogging();
-                System.out.println("XD");
-            }
+        binding.logInButton.setOnClickListener(view -> {
+            String email = binding.logInName.getText().toString();
+            String password = binding.logInName.getText().toString();
+            LoggingTask(email, password);
         });
     }
 
-    private void startLogging() {
-        String email = binding.logInName.getText().toString();
-        String password = binding.logInName.getText().toString();
-        if (email.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "Podaj dane", Toast.LENGTH_SHORT).show();
+    private void LoggingTask(String email, String password) {
+
+        if(email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(LoginActivity.this, "Nie podano danych", Toast.LENGTH_SHORT).show();
         }
         else mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         // Sign in success, update UI with the signed-in user's information
                         FirebaseUser user = mAuth.getCurrentUser();
-                       // updateUI(user);
+                        Toast.makeText(LoginActivity.this, "Logowanie się powiodło", Toast.LENGTH_SHORT).show();
+                        // updateUI(user);
                     } else {
                         // If sign in fails, display a message to the user.
                         Toast.makeText(LoginActivity.this, "Logowanie nie udało się",
@@ -62,6 +60,8 @@ public class LoginActivity extends BaseActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         // TODO: updateUI(currentUser);
     }
+
+
 
     @Override
     protected int getBottomNavigationMenuItemId() {

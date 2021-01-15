@@ -9,10 +9,26 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.fdntapp.R;
+import com.example.fdntapp.databinding.FragmentAboutBinding;
+
 public class AboutFragment extends Fragment {
+    FragmentAboutBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_about, container, false);
+        binding = FragmentAboutBinding.inflate(inflater, container, false);
+        setTexts();
+        return binding.getRoot();
+    }
+
+    /*
+    * There we set content for included article layouts
+    * We do this programmatically because it's impossible to set overrided android:text argument in included xml layout
+     */
+    private void setTexts() {
+        binding.whoAreWe.header.setText(R.string.who_are_we);
+        binding.whoAreWe.content.setText(R.string.who_are_we_content);
+        binding.whatWeDoing.header.setText(R.string.what_we_doing);
+        binding.whatWeDoing.content.setText(R.string.what_we_doing_content);
     }
 }
