@@ -47,15 +47,12 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
             switch(item.getItemId()) {
                 case R.id.action_home:
                     startActivity(new Intent(this, HomeActivity.class));
-                    //finish();
                     break;
                 case R.id.action_login:
                     startActivity(new Intent(this, LoginActivity.class));
-                    //finish();
                     break;
                 case R.id.action_abfdnt:
                     startActivity(new Intent(this, AbfdntActivity.class));
-                    //finish();
                     break;
             }
         });
