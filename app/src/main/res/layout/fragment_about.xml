@@ -6,28 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".ui.abfdnt.AboutFragment"
     android:fillViewport="true">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp">
-
-    <include
-        layout="@layout/article"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/who_are_we"
-        android:layout_marginTop="16dp" />
+        android:layout_marginBottom="16dp">
 
-    <include
-        layout="@layout/article"
-        android:id="@+id/what_we_doing"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/who_are_we" />
+        <include
+            layout="@layout/article"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/who_are_we"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <include
+            layout="@layout/article"
+            android:id="@+id/what_we_doing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/who_are_we" />
+
+        <include layout="@layout/article"
+            android:id="@+id/about_patron"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/what_we_doing" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

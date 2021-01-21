@@ -30,5 +30,7 @@ public class AboutFragment extends Fragment {
         binding.whoAreWe.content.setText(R.string.who_are_we_content);
         binding.whatWeDoing.header.setText(R.string.what_we_doing);
         binding.whatWeDoing.content.setText(R.string.what_we_doing_content);
+        binding.aboutPatron.header.setText(R.string.about_patron_header);
+        binding.aboutPatron.content.setText(R.string.about_patron_content);
     }
 }
