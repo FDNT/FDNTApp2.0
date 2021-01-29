@@ -14,7 +14,6 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="home_topbar_text">Szukaj w aktualnościach</string>
@@ -32,4 +31,7 @@
     <string name="what_we_doing_content">Głównym zadaniem i założeniem Fundacji jest wspieranie rozwoju naukowego zdolnej młodzieży pochodzącej z niezamożnych rodzin, z małych miast i terenów wiejskich, ale jej działanie nie ogranicza się jedynie do programu stypendialnego.</string>
     <string name="about_patron_header">O PATRONIE</string>
     <string name="about_patron_content">Św. Jan Paweł II był dla mnie pomnikiem. Podziwiałem Go tak samo, jak podziwia się te wszystkie mniej lub bardziej patetyczne, a czasem i karykaturalne, statuy. Idziesz obok i wiesz, że jest to ktoś ważny, bo inaczej nie stawialiby go na cokole w centrum miasta. Moje emocje względem Niego zawierały się w bezwiednie wypowiadanym - parafrazując Gombrowicza - “Jan Paweł II wielkim Polakiem był”. Ot, takie ze mnie pokolenie JP2 było. Aż w końcu, całkiem przypadkowo, trafiłem poprzez konkurs o indeks na studia im. Bpa Jana Chrapka do Fundacji. Dali mi indeks, stypendium i przyjaźnie, które, jak się zdaje, przetrwają do końca życia. Nie wypadało więc ograniczać się do “pomnikowej" znajomości św. Jana Pawła II. Poznanie Jego myśli, dzieł, twórczości musiało ustąpić jednak wrażeniu, jakie wywarli na mnie inni stypendyści. Owszem, na początku myślałem, że trafiłem do sekty - obejmowanie się na przywitanie, wspólne spotkania, modlitwy, imprezy. Po jakimś jednak czasie to dzięki tym ludziom dostrzegłem sedno przesłania Jana Pawła II do młodych, zobaczyłem, jak to jest żyć wiarą na co dzień. I za tą możliwość spotkania Jego “żywego pomnika” będę dziękował Mu do końca życia.</string>
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget aliquet nibh praesent tristique magna. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Purus faucibus ornare suspendisse sed nisi lacus. Egestas fringilla phasellus faucibus scelerisque eleifend. Ullamcorper eget nulla facilisi etiam dignissim. Molestie at elementum eu facilisis sed odio morbi quis. Ut etiam sit amet nisl purus in mollis nunc sed. Sem nulla pharetra diam sit amet nisl suscipit adipiscing. Mollis nunc sed id semper.
+    </string>
 </resources>
