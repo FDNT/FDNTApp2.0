@@ -13,29 +13,8 @@
     android:layout_marginStart="@dimen/activity_vertical_margin"
     android:layout_marginEnd="@dimen/activity_vertical_margin"
     android:layout_marginBottom="16dp">
-
-    <TextView
-        android:id="@+id/text_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:gravity="center"
-        android:justificationMode="inter_word"
-        android:maxLines="4"
-        android:paddingStart="25dp"
-        android:paddingEnd="5dp"
-        android:text="@string/lorem_ipsum"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/expand_collapse_icon"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/expand_collapse_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_expand_more_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view" />
+    <include android:id="@+id/expandable"
+        layout="@layout/expandable_text_view"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
