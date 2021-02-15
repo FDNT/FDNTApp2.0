@@ -1,4 +1,4 @@
-package com.example.fdntapp.abstractions;
+package com.example.android.abstractions;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,11 +9,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.fdntapp.R;
-import com.example.fdntapp.ui.HomeActivity;
-import com.example.fdntapp.ui.LoginActivity;
-import com.example.fdntapp.ui.abfdnt.AbfdntActivity;
+import com.example.android.R;
+import com.example.android.ui.HomeActivity;
+import com.example.android.ui.LoginActivity;
+import com.example.android.ui.abfdnt.AbfdntActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import static com.example.android.Util.is_logged_in;
 
 // Super class fot other activity classes
 public abstract class BaseActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -24,7 +26,13 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
         super.onCreate(savedInstanceState);
         setContentView(getRootView());
 
-        btmNavView = (BottomNavigationView) findViewById(R.id.bottom_nav_view);
+        btmNavView = findViewById(R.id.bottom_nav_view);
+
+        if (is_logged_in()) {
+            btmNavView.getMenu().clear();
+            btmNavView.inflateMenu(R.menu.main_menu_logged_in);
+        }
+
         btmNavView.setOnNavigationItemSelectedListener(this);
     }
 

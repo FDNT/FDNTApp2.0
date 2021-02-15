@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/bottom_bar_home_title"
+        app:showAsAction="always" />
+
+    <group android:id="@+id/actions_if_logged_in">
+        <item
+            android:id="@+id/action_calendar"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_event_note_24"
+            android:title="@string/bottom_bar_home_title"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/action_email"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_email_24"
+            android:title="@string/bottom_bar_home_title"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/action_communicator"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_chat_24"
+            android:title="@string/bottom_bar_home_title"
+            app:showAsAction="always" />
+    </group>
+
+    <item
+        android:id="@+id/action_abfdnt"
+        android:enabled="true"
+        android:icon="@drawable/ic_help_black_24dp"
+        android:title="@string/title_abfdnt"
+        app:showAsAction="always" />
+</menu>

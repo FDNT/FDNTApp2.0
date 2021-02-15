@@ -1,4 +1,4 @@
-package com.example.fdntapp.ui.abfdnt;
+package com.example.android.ui.abfdnt;
 
 import android.os.Bundle;
 
@@ -8,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.fdntapp.R;
-import com.example.fdntapp.databinding.FragmentAboutBinding;
+import com.example.android.R;
+import com.example.android.databinding.FragmentAboutBinding;
 
 public class AboutFragment extends Fragment {
     FragmentAboutBinding binding;

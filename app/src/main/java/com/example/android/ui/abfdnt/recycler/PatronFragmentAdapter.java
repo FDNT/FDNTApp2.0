@@ -1,4 +1,4 @@
-package com.example.fdntapp.ui.abfdnt.recycler;
+package com.example.android.ui.abfdnt.recycler;
 
 import android.animation.ObjectAnimator;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.fdntapp.R;
+import com.example.android.R;
 
 public class PatronFragmentAdapter extends RecyclerView.Adapter<PatronFragmentAdapter.ViewHolder> {
 
@@ -22,13 +22,13 @@ public class PatronFragmentAdapter extends RecyclerView.Adapter<PatronFragmentAd
 
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private final int COLLAPSED_MAX_LINES = 4;
-        private TextView textView;
-        private ImageView expandCollapseIcon;
+        private final TextView textView;
+        private final ImageView expandCollapseIcon;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = (TextView) itemView.findViewById(R.id.text);
-            expandCollapseIcon = (ImageView) itemView.findViewById(R.id.expand_collapse_icon);
+            textView = itemView.findViewById(R.id.text);
+            expandCollapseIcon = itemView.findViewById(R.id.expandable_text); //TODO: expand_collpse_cośtam
             textView.setOnClickListener(this);
             expandCollapseIcon.setOnClickListener(this);
         }
@@ -67,7 +67,7 @@ public class PatronFragmentAdapter extends RecyclerView.Adapter<PatronFragmentAd
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.expandable_text_view, parent, false);
+                .inflate(R.layout.fragment_patron, parent, false); //TODO: expandable_text_view
         return new ViewHolder(view);
     }
 

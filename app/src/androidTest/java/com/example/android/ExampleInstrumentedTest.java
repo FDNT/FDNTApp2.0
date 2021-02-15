@@ -1,4 +1,4 @@
-package com.example.fdntapp;
+package com.example.android;
 
 import android.content.Context;
 

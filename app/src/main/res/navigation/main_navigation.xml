@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.fdntapp.ui.HomeActivity"
+        android:name="com.example.android.ui.HomeActivity"
         android:label="@string/bottom_bar_home_title"
         tools:layout="@layout/activity_home" />
 
     <fragment
         android:id="@+id/navigation_login"
-        android:name="com.example.fdntapp.ui.LoginActivity"
+        android:name="com.example.android.ui.LoginActivity"
         android:label="@string/title_login"
         tools:layout="@layout/activity_login" />
 
     <fragment
         android:id="@+id/navigation_abfdnt"
-        android:name="com.example.fdntapp.ui.abfdnt.AbfdntActivity"
+        android:name="com.example.android.ui.abfdnt.AbfdntActivity"
         android:label="@string/title_abfdnt"
         tools:layout="@layout/activity_abfdnt" />
 </navigation>

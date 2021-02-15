@@ -5,14 +5,15 @@
     <item
         android:id="@+id/action_home"
         android:enabled="true"
-        app:showAsAction="ifRoom"
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/bottom_bar_home_title" />
+        android:title="@string/bottom_bar_home_title"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_login"
         android:enabled="true"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
+
         android:icon="@drawable/ic_login_black_24dp"
         android:title="@string/title_login" />
 
@@ -21,5 +22,5 @@
         android:enabled="true"
         android:icon="@drawable/ic_help_black_24dp"
         android:title="@string/title_abfdnt"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="always" />
 </menu>

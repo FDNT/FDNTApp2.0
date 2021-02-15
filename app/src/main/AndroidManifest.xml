@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.fdntapp">
+    package="com.example.android">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -9,16 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FDNTApp">
-        <activity
-            android:name=".ui.LoginActivity"
-            android:noHistory="true"
-            android:label="@string/title_activity_login"
-            android:theme="@style/Theme.FDNTApp.NoActionBar"/>
-        <activity
-            android:name=".ui.abfdnt.AbfdntActivity"
-            android:noHistory="true"
-            android:label="@string/title_abfdnt"
-            android:theme="@style/Theme.FDNTApp.NoActionBar"/>
+
         <activity
             android:name=".ui.HomeActivity"
             android:noHistory="true"
@@ -29,6 +23,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.LoginActivity"
+            android:noHistory="true"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.FDNTApp.NoActionBar"/>
+        <activity
+            android:name=".ui.abfdnt.AbfdntActivity"
+            android:noHistory="true"
+            android:label="@string/title_abfdnt"
+            android:theme="@style/Theme.FDNTApp.NoActionBar"/>
+
     </application>
 
 </manifest>

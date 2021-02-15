@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/about_fragment"
-        android:name="com.example.fdntapp.ui.abfdnt.AboutFragment"
+        android:name="com.example.android.ui.abfdnt.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" >
     </fragment>
     <fragment
         android:id="@+id/patron_fragment"
-        android:name="com.example.fdntapp.ui.abfdnt.PatronFragment"
+        android:name="com.example.android.ui.abfdnt.PatronFragment"
         android:label="fragment_patron"
         tools:layout="@layout/fragment_patron" />
 </navigation>

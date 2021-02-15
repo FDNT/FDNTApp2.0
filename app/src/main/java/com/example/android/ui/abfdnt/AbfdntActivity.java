@@ -1,29 +1,17 @@
-package com.example.fdntapp.ui.abfdnt;
+package com.example.android.ui.abfdnt;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
-import com.example.fdntapp.R;
-import com.example.fdntapp.abstractions.BaseActivity;
-import com.example.fdntapp.databinding.ActivityAbfdntBinding;
-import com.example.fdntapp.ui.LoginActivity;
-import com.example.fdntapp.ui.HomeActivity;
-import com.google.android.material.navigation.NavigationView;
+import com.example.android.R;
+import com.example.android.abstractions.BaseActivity;
+import com.example.android.databinding.ActivityAbfdntBinding;
 
 public class AbfdntActivity extends BaseActivity {
     private ActivityAbfdntBinding binding;

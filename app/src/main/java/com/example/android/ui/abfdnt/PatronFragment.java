@@ -1,22 +1,18 @@
-package com.example.fdntapp.ui.abfdnt;
+package com.example.android.ui.abfdnt;
 
-import android.animation.ObjectAnimator;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import com.example.fdntapp.R;
-import com.example.fdntapp.databinding.FragmentPatronBinding;
-import com.example.fdntapp.ui.abfdnt.recycler.PatronFragmentAdapter;
+import com.example.android.R;
+import com.example.android.databinding.FragmentPatronBinding;
+import com.example.android.ui.abfdnt.recycler.PatronFragmentAdapter;
 
 import org.jetbrains.annotations.NotNull;
-import org.w3c.dom.Text;
 
 public class PatronFragment extends Fragment {
     private final int COLLAPSED_MAX_LINES = 4;
